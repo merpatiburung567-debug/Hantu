@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aroma Senja Coffee | Kenikmatan Kopi Asli </title>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* Pengaturan Dasar & Tema Warna (Cokelat & Krem) */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; line-height: 1.8; background-color: #faf0e6; color: #3e2723; overflow-x: hidden; /* Mencegah scroll horizontal saat animasi */ }
+        h1, h2, h3 { font-family: 'Palatino', 'Palatino Linotype', 'Book Antiqua', serif; color: #5d4037; font-weight: 700; }
+        
+        /* Container */
+        .container { width: 85%; max-width: 1000px; margin: auto; padding: 20px; }
+
+        /* Header / Navbar */
+        header { background: #5d4037; color: #fff; padding: 1rem 0; text-align: center; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        header h1 { color: #fff; margin: 0; font-size: 1.5rem; letter-spacing: 1px; }
+        
+        /* Memberi jarak agar konten tidak tertutup header yang fix */
+        body { padding-top: 70px; }
+
+        /* Hero Section (Bagian Utama Atas) */
+        .hero { text-align: center; padding: 100px 20px; background: #fff; border-bottom: 5px solid #d7ccc8; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 15px; line-height: 1.2; }
+        .hero p { font-size: 1.3rem; color: #6d4c41; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        
+        /* Tombol Utama (Call to Action) dengan Animasi CSS */
+        .btn-order { display: inline-block; background: #a1887f; color: #fff; padding: 18px 35px; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; letter-spacing: 1px; transition: all 0.3s ease-in-out; /* Animasi lembut saat hover */ box-shadow: 0 4px 15px rgba(161, 136, 127, 0.4); }
+        .btn-order:hover { background: #8d6e63; transform: translateY(-3px); /* Tombol sedikit terangkat */ box-shadow: 0 6px 20px rgba(161, 136, 127, 0.6); }
+
+        /* Section Menu/Produk */
+        .menu { padding: 80px 0; background: #fff; }
+        .menu h2 { text-align: center; margin-bottom: 60px; font-size: 2.5rem; position: relative; display: inline-block; left: 50%; transform: translateX(-50%); }
+        .menu h2::after { content: ''; display: block; width: 60px; height: 3px; background: #a1887f; margin: 10px auto 0; }
+        
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .menu-item { background: #faf0e6; padding: 30px; border-radius: 15px; text-align: center; border: 1px solid #d7ccc8; transition: transform 0.3s ease; }
+        .menu-item:hover { transform: scale(1.03); /* Sedikit membesar saat kursor di atasnya */ }
+        .menu-item h3 { margin-top: 15px; font-size: 1.5rem; }
+        .menu-item p { color: #6d4c41; font-size: 1rem; }
+        .menu-item .price { font-weight: bold; color: #a1887f; font-size: 1.3rem; margin-top: 20px; display: block; }
+
+        /* Section Testimoni */
+        .testimonials { padding: 80px 0; background: #d7ccc8; color: #3e2723; }
+        .testimonials h2 { text-align: center; color: #3e2723; margin-bottom: 50px; font-size: 2.5rem; }
+        .testimonial-item { font-style: italic; margin-bottom: 30px; text-align: center; padding: 20px 50px; background: rgba(255,255,255,0.5); border-radius: 10px; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .testimonial-item p { font-size: 1.1rem; }
+
+        /* Footer */
+        footer { background: #3e2723; color: #fff; text-align: center; padding: 40px; margin-top: 0; }
+        footer a { color: #d7ccc8; text-decoration: none; font-weight: bold; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>AROMA SENJA COFFEE</h1>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1 data-aos="fade-up" data-aos-duration="1000">Rasakan Kehangatan Kopi Asli Indonesia</h1>
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Dari biji pilihan, disangrai dengan hati, melahirkan aroma yang menenangkan jiwa di setiap cangkir.</p>
+            <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">
+                <a href="#order" class="btn-order">PESAN KOPI SEKARANG</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu" id="order">
+        <div class="container">
+            <h2 data-aos="fade-up">Koleksi Kopi Favorit</h2>
+            <div class="menu-grid">
+                <div class="menu-item" data-aos="fade-right" data-aos-duration="800">
+                    <h3>Gayo Arabica Special</h3>
+                    <p>Kopi dengan cita rasa rempah dan keasaman yang pas. Cocok untuk pagi hari.</p>
+                    <span class="price">Rp 85.000 / 250gr</span>
+                </div>
+                <div class="menu-item" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <h3>Toraja Robusta Gold</h3>
+                    <p>Cita rasa kuat dan *full-bodied*. Pas untuk kamu yang butuh energi ekstra.</p>
+                    <span class="price">Rp 75.000 / 250gr</span>
+                </div>
+                <div class="menu-item" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
+                    <h3>Senja Blend (Signature)</h3>
+                    <p>Perpaduan Arabica & Robusta yang harmonis. Lembut & menenangkan.</p>
+                    <span class="price">Rp 80.000 / 250gr</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 data-aos="fade-up">Kata Mereka yang Sudah Mencoba</h2>
+            <div class="testimonial-item" data-aos="flip-up" data-aos-duration="1000">
+                <p>"Aromanya benar-benar menggugah selera. Kopi Gayo-nya juara!"</p>
+                <p><strong>- Andi, Jakarta</strong></p>
+            </div>
+            <div class="testimonial-item" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="300">
+                <p>"Senja Blend-nya pas banget buat nemenin kerja sore-sore. Recommended!"</p>
+                <p><strong>- Maya, Bandung</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Aroma Senja Coffee. All Rights Reserved.</p>
+            <p>Pemesanan via WhatsApp: <a href="https://wa.me/6282180320588">0821-8032-0588</a></p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        AOS.init({
+            once: true, // Animasi hanya berjalan sekali saat di-scroll pertama kali
+            easing: 'ease-out-back', // Jenis gerakan animasi yang lebih berkelas
+        });
+    </script>
+
+</body>
+</html>
